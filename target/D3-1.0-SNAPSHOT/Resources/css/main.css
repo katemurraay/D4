@@ -1,0 +1,280 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/*
+    Created on : 13-Nov-2019, 14:53:08
+    Author     : katem
+*/
+@import url("https://fonts.googleapis.com/css?family=Open+Sans:300");
+@import url('https://fonts.googleapis.com/css?family=Montserrat');
+*{
+    font-family: 'Montserrat', sans-serif;
+}
+
+.popupBox {
+    position: absolute;
+    left: 140px;
+}
+
+.popupCell {
+    background-color: #fffafa;
+}
+
+.popupCell:hover {
+    background-color: #f5ebe9;
+}
+
+.popupItem {
+    color: #333;
+    text-decoration: none;
+    font-size: 1.2em;
+}
+
+.openBtn {
+    background: black;
+    color:white;
+    border: none;
+    padding: 10px 15px;
+    font-size: 15px;
+    cursor: pointer;
+    opacity:1;
+}
+
+.openBtn:hover {
+    opacity:0.2;
+}
+
+.overlay {
+    height: 100%;
+    width: 100%;
+    display: none;
+    position: fixed;
+    z-index: 999;
+    top: 0;
+    left: 0;
+    background-color: rgb(0,0,0);
+    background-color: rgba(0,0,0, 0.9);
+}
+
+.overlay-content {
+    position: relative;
+    top: 46%;
+    width: 80%;
+    text-align: center;
+    margin-top: 30px;
+    margin: auto;
+}
+
+.overlay .closebtn {
+    position: absolute;
+    top: 90px;
+    right: 45px;
+    font-size: 50px;
+    cursor: pointer;
+    color: white;
+    opacity:1;
+}
+
+.overlay .closebtn:hover {
+    opacity:0.2;
+}
+
+.overlay input[type=text] {
+    padding: 15px;
+    font-size: 20px;
+    border: none;
+    float: left;
+    width: 80%;
+    background: white;
+}
+select{
+    border-radius: 4px;
+    border:1px solid #CCC;
+
+}
+.overlay input[type=text]:hover {
+    background: #f1f1f1;
+}
+
+.overlay button {
+    float: left;
+    width: 10%;
+    padding: 15px;
+    background:white;
+    font-weight:bold;
+    font-size: 20px;
+    border: none;
+    cursor: pointer;
+}
+
+.overlay button i:hover {
+    color:#9900cc;
+    transition: all 0.5s ease;
+    transform: translateX(5px);
+    cursor: pointer;
+
+}
+.content{
+    padding-top:42.5px;
+
+}
+h2{
+    font-family:'Montserrat';
+
+}
+
+.links{
+    align-content: center;
+    background-color:black;
+    color: white;
+    display: block;
+    text-decoration: none;
+}
+
+.logo{
+    top: 0;
+    max-height: 40px;
+    display:block;
+    width: 100px;
+}
+
+.navbar {
+    -webkit-order: 1;
+    width: 100%;
+    background-color: black;
+    border-bottom: double white;
+    color: white;
+    font-size: 1vw;
+    overflow: hidden;
+    position: fixed;
+    display: inline-block;
+    z-index: 999;
+    opacity: 1;
+}
+header{
+    position:fixed;
+    top:0;
+    left:0;
+    right:0;
+}
+.navbar a {
+    float: left;
+    padding: 10px;
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+.navbar a:hover {
+    opacity: 0.2;
+    border-radius: 2em;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.rightnav {
+    float:right;
+}
+
+
+
+@media screen and (max-width: 500px) {
+
+    .navbar a {
+
+        float: none;
+        display: block;
+
+
+    }
+
+
+
+    .rightnav{
+        float:none;
+
+    }}
+
+@-webkit-keyframes pulse {
+    from {
+        box-shadow: 0 0 0 0 rgba(153, 0, 204, 0.4);
+    }
+    to {
+        box-shadow: 0 0 0 45px rgba(153, 0, 204, 0);
+    }
+}
+
+@keyframes pulse {
+    from {
+        box-shadow: 0 0 0 0 rgba(153, 0, 204,0.4);
+    }
+    to {
+        box-shadow: 0 0 0 45px rgba(153, 0, 204, 0);
+    }
+}
+
+.btn-hover a{
+    text-decoration: none;
+    color: white;
+}
+
+.btn-hover {
+    position: relative;
+    width: 150px;
+    height: 60px;
+    border: 1px solid rgba(153, 0, 204, 0.2);
+    border-radius: 2px;
+    line-height: 60px;
+    color: white;
+
+    background-color: black;
+    text-align: center;
+    font-size: 10px;
+    letter-spacing: 3px;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+.btn-hover:before {
+    content: "";
+    width: 0%;
+    height: 0%;
+    position: absolute;
+    visibility: hidden;
+    border-radius: 2px;
+}
+.btn-hover:before {
+    border-top: 1px solid  #9900cc;
+    border-right: 1px solid  #9900cc;
+    transition: width 0.1s ease 0.3s, height 0.1s ease 0.2s, visibility 0s 0.4s;
+    top: 0;
+    left: 0;
+}
+.btn-hover:after {
+    border-left: 1px solid  #9900cc;
+    border-bottom: 1px solid  #9900cc;
+    bottom: 0;
+    right: 0;
+    transition: width 0.1s ease 0.1s, height 0.1s ease, visibility 0s 0.2s;
+}
+.btn-hover:hover {
+    -webkit-animation: pulse 1s ease-out 0.4s;
+    animation: pulse 1s ease-out 0.4s;
+    color:  #9900cc;
+}
+.btn-hover:hover:before{
+
+    visibility: visible;
+}
+.btn-hover:hover:before {
+    transition: width 0.1s ease, height 0.1s ease 0.1s;
+}
+.btn-hover:hover:after {
+    transition: width 0.1s ease 0.2s, height 0.1s ease 0.3s, visibility 0s 0.2s;
+}
+
+

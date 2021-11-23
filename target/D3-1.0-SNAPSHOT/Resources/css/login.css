@@ -1,0 +1,139 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/*
+    Created on : 13-Nov-2019, 14:53:41
+    Author     : katem
+*/
+
+@import url('https://fonts.googleapis.com/css?family=Montserrat');
+
+* {
+    box-sizing: border-box;
+}
+h2{
+    font-family: 'Montserrat';
+    text-align: center;
+    font-size:20px
+
+}
+
+
+
+body {
+    background-image:url("../images/sign-inbackground.png");
+    min-height:380px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+
+
+}
+
+
+.form-signin {
+
+    max-width: 500px;
+    position:absolute;
+    right:0;
+    height: 90%;
+    padding: 19px 29px 29px;
+    margin: 0 auto 20px;
+    background-color: #fff;
+
+}
+.form-signin .form-signin-heading{
+    margin-bottom: 10px;
+}
+.form-signin input[type="email"],
+.form-signin input[type="password"] {
+    font-size: 18px;
+    height: auto;
+    margin-bottom: 15px;
+    padding: 7px 9px;
+}
+
+
+
+.group 		  {
+    position:relative;
+    margin-bottom:45px;
+}
+
+input {
+    font-size:20px;
+    padding:10px 10px 10px 5px;
+    display:block;
+    width:300px;
+    border:none;
+
+}
+input:focus{
+    outline:none;
+}
+
+
+
+
+
+.bar 	{ position:relative; display:block; width:300px; }
+.bar:before, .bar:after 	{
+    content:'';
+    height:2px;
+    width:0;
+    bottom:1px;
+    position:absolute;
+    background:#9900cc;
+    transition:0.2s ease all;
+    -moz-transition:0.2s ease all;
+    -webkit-transition:0.2s ease all;
+}
+.bar:before {
+    left:50%;
+}
+.bar:after {
+    right:50%;
+}
+
+
+input:focus ~ .bar:before, input:focus ~ .bar:after {
+    width:50%;
+}
+
+
+.highlight {
+    position:absolute;
+    height:60%;
+    width:100px;
+    top:25%;
+    left:0;
+    pointer-events:none;
+    opacity:0.5;
+}
+
+
+input:focus ~ .highlight {
+    -webkit-animation:inputHighlighter 0.3s ease;
+    -moz-animation:inputHighlighter 0.3s ease;
+    animation:inputHighlighter 0.3s ease;
+}
+
+@webkit-keyframes inputHighlighter {
+    from { background:#9900cc; }
+    to 	{ width:0; background:transparent; }
+}
+@-moz-keyframes inputHighlighter {
+    from { background:#9900cc; }
+    to 	{ width:0; background:transparent; }
+}
+@keyframes inputHighlighter {
+    from { background:#9900cc; }
+    to 	{ width:0; background:transparent; }
+}
